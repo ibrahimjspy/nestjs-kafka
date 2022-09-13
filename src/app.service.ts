@@ -7,10 +7,10 @@ export class AppService {
 
   async getHello() {
     await this.producerService.produce({
-      topic: 'test',
+      topic: 'cards',
       messages: [
         {
-          value: 'Hello World',
+          value: 'poker',
         },
       ],
     });
