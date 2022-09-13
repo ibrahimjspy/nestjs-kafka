@@ -4,19 +4,11 @@ export const updateProductQuery = (productData) => {
   return gql`
     mutation{
   productUpdate(
+    id:${productData.product_id}
     input: {
-      attributes: [
-        id: A1
-        values: ["${productData.color}"]
-      ]
-      category: ${productData.category}
-      description: "${productData.description}"
+      price: ${productData.product_catalog_price}
       name: "${productData.name}"
       slug: "${productData.slug}"
-      seo: {
-        title: "${productData.seo_title}"
-        description: "${productData.seo_description}"
-      }
       weight: "${productData.weight}"
       rating: "${productData.rating}"
       productType: "$productType"
