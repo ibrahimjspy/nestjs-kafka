@@ -10,7 +10,7 @@ export class TestConsumer implements OnModuleInit {
   async onModuleInit() {
     await this.consumerService.consume(
       // subscribing to topic
-      { topic: 'product_table' },
+      { topic: 'product_create' },
       {
         eachMessage: async ({ topic, partition, message }) => {
           // consuming product payload message sent by debezium
