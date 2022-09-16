@@ -7,13 +7,10 @@ export class AppService {
   //  creating demo messages in topic product
   async getHello() {
     await this.producerService.produce({
-      topic: 'product_create',
+      topic: 'product',
       messages: [
         {
-          value: {
-            name: 'demo product',
-            description: 'lorem ipsum magnum',
-          },
+          value: 'hello i am kafka message',
         },
       ],
     });
